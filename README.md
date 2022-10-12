@@ -1,6 +1,6 @@
 # mullvad-polybar
 
-A small script to add a one click solution to your polybar when you are a (Mullvad)[https://mullvad.net] user. Heavily inspired by [shervinsahba/polybar-vpn-controller](https://github.com/shervinsahba/polybar-vpn-controller), but I rewrote this to remove unnecessary stuff and to have a cleaned up version. Thanks for the inspiration!
+A small script to add a one click solution to your polybar when you are a [Mullvad](https://mullvad.net) user. Heavily inspired by [shervinsahba/polybar-vpn-controller](https://github.com/shervinsahba/polybar-vpn-controller), but I rewrote this to remove unnecessary stuff and to have a cleaned up version. Thanks for the inspiration!
 
 ## Usage
 
