@@ -4,9 +4,9 @@ A small script to add a one click solution to your polybar when you are a (Mullv
 
 ## Usage
 
-Left click: connect/disconnect
-Right click: Select relay
-Middle click: Copy IP
+* Left click: connect/disconnect
+* Right click: Select relay
+* Middle click: Copy IP
 
 See [shervinsahba/polybar-vpn-controller](https://github.com/shervinsahba/polybar-vpn-controller).
 
