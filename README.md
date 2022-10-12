@@ -32,6 +32,6 @@ Then add it where you want it:
 
 ## Requirements:
 
-* (ROFI)[https://github.com/davatorium/rofi]
-* (Polybar)[https://github.com/polybar/polybar]
-* (Mullvad client)[https://mullvad.net/en/download/linux/]
+* [ROFI](https://github.com/davatorium/rofi)
+* [Polybar](https://github.com/polybar/polybar)
+* [Mullvad client](https://mullvad.net/en/download/linux/)
