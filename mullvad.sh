@@ -9,18 +9,18 @@ REMOTE_IP="ip.subdev.org"
 NOTIFY_ICON="/usr/share/icons/hicolor/32x32/apps/mullvad-vpn.png"
 
 declare -A countries=(
-    ["Albania"]=AL ["Australia"]=AU ["Austria"]=AT ["Belgium"]=BE ["Brazil"]=BR
-    ["Bulgaria"]=BG ["Canada"]=CA ["Czech Republic"]=CZ ["Denmark"]=DK
-    ["Estonia"]=EE ["Finland"]=FI ["France"]=FR ["Germany"]=DE
-    ["Greece"]=GR ["Hong Kong"]=HK ["Hungary"]=HU ["Ireland"]=IE ["Israel"]=IL
-    ["Italy"]=IT ["Japan"]=JP ["Latvia"]=LV ["Luxembourg"]=LU ["Moldova"]=MD
-    ["Netherlands"]=NL ["New Zealand"]=NZ ["North Macedonia"]=MK ["Norway"]=NO
+    ["Albania"]=AL ["Australia"]=AU ["Austria"]=AT ["Belgium"]=BE
+    ["Brazil"]=BR ["Bulgaria"]=BG ["Canada"]=CA ["Chile"]=CL ["Colombia"]=CO
+    ["Croatia"]=HR ["Cyprus"]=CY ["Czech Republic"]=CZ ["Denmark"]=DK
+    ["Estonia"]=EE ["Finland"]=FI ["France"]=FR ["Germany"]=DE ["Greece"]=GR
+    ["Hong Kong"]=HK ["Hungary"]=HU ["Indonesia"]=ID ["Ireland"]=IE ["Israel"]=IL
+    ["Italy"]=IT ["Japan"]=JP ["Malaysia"]=MY ["Mexico"]=MX ["Netherlands"]=NL
+    ["New Zealand"]=NZ ["Nigeria"]=NG ["Norway"]=NO ["Peru"]=PE ["Philippines"]=PH
     ["Poland"]=PL ["Portugal"]=PT ["Romania"]=RO ["Serbia"]=RS ["Singapore"]=SG
-    ["Slovakia"]=SK ["Spain"]=ES ["Sweden"]=SE ["Switzerland"]=CH
-    ["UK"]=GB ["United Arab Emirates"]=AE ["USA"]=US
+    ["Slovakia"]=SK ["Slovenia"]=SI ["South Africa"]=ZA ["Spain"]=ES ["Sweden"]=SE
+    ["Switzerland"]=CH ["Thailand"]=TH ["Turkey"]=TR ["UK"]=GB ["Ukraine"]=UA
+    ["USA"]=US
 )
-
-###
 
 notify() { notify-send "$1" --icon "$NOTIFY_ICON"; }
 
@@ -43,11 +43,8 @@ info() { [[ $(status) == "connected" ]] && echo "Connected to $(city), $(country
 
 location(){
     mullvad relay set location "$1"; sleep 1
-    if [ "$(status)" == "connected" ]; then
-        notify "$(info)"
-    else
-        notify "Relay location changed to $1"
-    fi
+    if [ "$(status)" == "connected" ]; then notify "$(info)";
+    else notify "Relay location changed to $1"; fi
 }
 
 toggle() {
@@ -75,14 +72,15 @@ menu() {
     local icon="⚑"
     local entries=""
 
-    for name in "${!countries[@]}"; do entries+="$icon $name|"; done
+    for name in "${!countries[@]}"; do
+        entries+="$icon $name|"
+    done
 
     selection=$(rofi -location 3 -xoffset 20 -yoffset +38 -sep "|" -dmenu -i -p "$title" <<< "$entries")
     [[ "$selection" == "" ]] && return
 
     name="${selection/$icon /}"
     code="${countries[$name]}"
-
     location "$code"
 }
 
