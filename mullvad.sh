@@ -8,17 +8,57 @@ COLOR_DISCONNECTED="#fc3542"
 REMOTE_IP="ip.subdev.org"
 NOTIFY_ICON="/usr/share/icons/hicolor/32x32/apps/mullvad-vpn.png"
 
+# 2026-01
 declare -A countries=(
-    ["Albania"]=AL ["Australia"]=AU ["Austria"]=AT ["Belgium"]=BE
-    ["Brazil"]=BR ["Bulgaria"]=BG ["Canada"]=CA ["Chile"]=CL ["Colombia"]=CO
-    ["Croatia"]=HR ["Cyprus"]=CY ["Czech Republic"]=CZ ["Denmark"]=DK
-    ["Estonia"]=EE ["Finland"]=FI ["France"]=FR ["Germany"]=DE ["Greece"]=GR
-    ["Hong Kong"]=HK ["Hungary"]=HU ["Indonesia"]=ID ["Ireland"]=IE ["Israel"]=IL
-    ["Italy"]=IT ["Japan"]=JP ["Malaysia"]=MY ["Mexico"]=MX ["Netherlands"]=NL
-    ["New Zealand"]=NZ ["Nigeria"]=NG ["Norway"]=NO ["Peru"]=PE ["Philippines"]=PH
-    ["Poland"]=PL ["Portugal"]=PT ["Romania"]=RO ["Serbia"]=RS ["Singapore"]=SG
-    ["Slovakia"]=SK ["Slovenia"]=SI ["South Africa"]=ZA ["Spain"]=ES ["Sweden"]=SE
-    ["Switzerland"]=CH ["Thailand"]=TH ["Turkey"]=TR ["UK"]=GB ["Ukraine"]=UA
+    ["Albania"]=AL
+    ["Argentina"]=AR
+    ["Australia"]=AU
+    ["Austria"]=AT
+    ["Belgium"]=BE
+    ["Brazil"]=BR
+    ["Bulgaria"]=BG
+    ["Canada"]=CA
+    ["Chile"]=CL
+    ["Colombia"]=CO
+    ["Croatia"]=HR
+    ["Cyprus"]=CY
+    ["Czech Republic"]=CZ
+    ["Denmark"]=DK
+    ["Estonia"]=EE
+    ["Finland"]=FI
+    ["France"]=FR
+    ["Germany"]=DE
+    ["Greece"]=GR
+    ["Hong Kong"]=HK
+    ["Hungary"]=HU
+    ["Indonesia"]=ID
+    ["Ireland"]=IE
+    ["Israel"]=IL
+    ["Italy"]=IT
+    ["Japan"]=JP
+    ["Malaysia"]=MY
+    ["Mexico"]=MX
+    ["Netherlands"]=NL
+    ["New Zealand"]=NZ
+    ["Nigeria"]=NG
+    ["Norway"]=NO
+    ["Peru"]=PE
+    ["Philippines"]=PH
+    ["Poland"]=PL
+    ["Portugal"]=PT
+    ["Romania"]=RO
+    ["Serbia"]=RS
+    ["Singapore"]=SG
+    ["Slovakia"]=SK
+    ["Slovenia"]=SI
+    ["South Africa"]=ZA
+    ["Spain"]=ES
+    ["Sweden"]=SE
+    ["Switzerland"]=CH
+    ["Thailand"]=TH
+    ["Turkey"]=TR
+    ["UK"]=GB
+    ["Ukraine"]=UA
     ["USA"]=US
 )
 
